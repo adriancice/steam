@@ -3,13 +3,16 @@
     <div class="slds-grid slds-wrap">
       <div class="slds-col slds-size_4-of-12">
         <div class="slds-m-around_medium">
-          <lightning-input
-            name="enter-search"
-            label="Enter steamID"
-            type="search"
-          ></lightning-input>
+          <div onkeyup={handleKeyUp}>
+            <lightning-input
+              name="enter-search"
+              label="Enter steamID"
+              type="search"
+            ></lightning-input>  
+          </div>
         </div>
       </div>
     </div>
+    <p if:true={queryTerm}>Searched for {queryTerm}!</p>
   </lightning-card>
 </template>

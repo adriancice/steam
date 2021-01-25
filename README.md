@@ -16,3 +16,16 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+
+You can use Named Credentials to create an End point URL with necessary parameters. For example, if this is is your URL:
+
+https://www.someendpointurl.com?param1=named&param2=credentials
+In Apex, You can access this URL like this:
+
+request.setEndpoint('callout:EndPointURL');
+Where, EndPointURL is the Name of the Named Credentials.
+
+
+4F133D62390817437D5BE805F995D4D7
+76561197988095529
