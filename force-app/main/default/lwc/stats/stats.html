@@ -1,5 +1,6 @@
 <template>
   <lightning-card title="Stats" icon-name="action:share_poll">
+    76561197988095529
     <div class="slds-grid slds-wrap">
       <div class="slds-col slds-size_4-of-12">
         <div class="slds-m-around_medium">
@@ -8,11 +9,24 @@
               name="enter-search"
               label="Enter steamID"
               type="search"
-            ></lightning-input>  
+            ></lightning-input>
           </div>
         </div>
       </div>
     </div>
-    <p if:true={queryTerm}>Searched for {queryTerm}!</p>
   </lightning-card>
+  <template if:true={summaries}>
+    <lightning-card>
+      <h3 slot="title">
+        <img src={avatarMedium} alt="avatar" class="customIcon">
+        {personName}
+      </h3>
+      <div slot="footer">
+        <lightning-badge label="Tag1"></lightning-badge>
+        <lightning-badge label="Tag2"></lightning-badge>
+        <lightning-badge label="Tag3"></lightning-badge>
+      </div>
+      <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    </lightning-card>
+  </template>
 </template>
