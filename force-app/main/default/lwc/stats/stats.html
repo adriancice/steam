@@ -10,6 +10,19 @@
               label="Enter steamID"
               type="search"
             ></lightning-input>
+            <div class="slds-p-around_medium lgc-bg">
+              <lightning-input
+                type="text"
+                label="Enter SteamID"
+                onchange={changeSteamId}
+              ></lightning-input>
+            </div>
+            <lightning-button
+              label="Neutral"
+              title="Non-primary action"
+              onclick={handleClick}
+              class="slds-m-left_x-small"
+            ></lightning-button>
           </div>
         </div>
       </div>
@@ -18,7 +31,7 @@
   <template if:true={summaries}>
     <lightning-card>
       <h3 slot="title">
-        <img src={avatarMedium} alt="avatar" class="customIcon">
+        <img src={avatarMedium} alt="avatar" class="customIcon" />
         {personName}
       </h3>
       <div slot="footer">
